@@ -1,0 +1,23 @@
+{
+  "MiniTest": {
+    "coverage": {
+      "/Users/danhoang/Documents/MakeSchool/reddit-on-rails-kazundan/app/models/user.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/danhoang/Documents/MakeSchool/reddit-on-rails-kazundan/app/controllers/application_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/danhoang/Documents/MakeSchool/reddit-on-rails-kazundan/app/helpers/application_helper.rb": [
+        0,
+        0
+      ]
+    },
+    "timestamp": 1456444533
+  }
+}
