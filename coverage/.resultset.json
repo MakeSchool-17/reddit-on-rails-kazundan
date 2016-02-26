@@ -1,6 +1,11 @@
 {
   "MiniTest": {
     "coverage": {
+      "/Users/danhoang/Documents/MakeSchool/reddit-on-rails-kazundan/app/models/subreddit.rb": [
+        1,
+        1,
+        null
+      ],
       "/Users/danhoang/Documents/MakeSchool/reddit-on-rails-kazundan/app/models/user.rb": [
         1,
         1,
@@ -18,6 +23,6 @@
         0
       ]
     },
-    "timestamp": 1456444533
+    "timestamp": 1456445933
   }
 }
