@@ -14,26 +14,26 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-02-25T15:55:33-08:00">2016-02-25T15:55:33-08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-02-25T16:18:53-08:00">2016-02-25T16:18:53-08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">22.22%</span></span>
+    (<span class="covered_percent"><span class="red">36.36%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.22
+         0.36
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>3</b> files in total.
-    <b>9</b> relevant lines. 
-    <span class="green"><b>2</b> lines covered</span> and
+    <b>4</b> files in total.
+    <b>11</b> relevant lines. 
+    <span class="green"><b>4</b> lines covered</span> and
     <span class="red"><b>7</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -68,6 +68,16 @@
         <td>0</td>
         <td>2</td>
         <td>0.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#8caa1d099132062932002b50c625eed8915893a7" class="src_link" title="app/models/subreddit.rb">app/models/subreddit.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>3</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -146,9 +156,9 @@
   </h2>
   <a name="Models"></a>
   <div>
-    <b>1</b> files in total.
-    <b>2</b> relevant lines. 
-    <span class="green"><b>2</b> lines covered</span> and
+    <b>2</b> files in total.
+    <b>4</b> relevant lines. 
+    <span class="green"><b>4</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -164,6 +174,16 @@
       </tr>
     </thead>
     <tbody>
+      
+      <tr>
+        <td class="strong"><a href="#8caa1d099132062932002b50c625eed8915893a7" class="src_link" title="app/models/subreddit.rb">app/models/subreddit.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>3</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
       
       <tr>
         <td class="strong"><a href="#5294934ad7cccff1a6ccbb91292bc11cebd1cf56" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
@@ -417,6 +437,42 @@
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="2">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="8caa1d099132062932002b50c625eed8915893a7">
+  <div class="header">
+    <h3>app/models/subreddit.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>2</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Subreddit &lt; ActiveRecord::Base</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    validates :title, presence: true, length: { maximum: 300 }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
           
           
           <code class="ruby">end</code>
