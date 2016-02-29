@@ -2,7 +2,7 @@ require 'test_helper'
 
 class SubredditTest < ActiveSupport::TestCase
   def setup
-      @subreddit = Subreddit.new(title: "Schools")
+      @subreddit = subreddits(:javascript)
   end
 
   test "subreddit is valid" do
