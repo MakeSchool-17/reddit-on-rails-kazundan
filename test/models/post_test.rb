@@ -2,29 +2,29 @@ require 'test_helper'
 
 class PostTest < ActiveSupport::TestCase
   def setup
-      @Post = posts(:js)
+      @post = posts(:js)
   end
 
   test "post is valid" do
-      assert @Post.valid?
+      assert @post.valid?
   end
 
   test "title should be present" do
-      @Post.title = "     "
-      assert_not @Post.valid?
+      @post.title = "     "
+      assert_not @post.valid?
   end
 
   test "content should be present" do
-      @Post.content = "    "
-      assert_not @Post.valid?
+      @post.content = "    "
+      assert_not @post.valid?
   end
 
   test "post can have comments" do
     comment = comments(:commentjs)
-    comment.post = @Post
+    comment.post = @post
     comment.save
     comment.reload
-    assert_equal comment.post, @Post
-    assert @Post.reload.comments.include? comment
+    assert_equal comment.post, @post
+    assert @post.reload.comments.include? comment
   end
 end
