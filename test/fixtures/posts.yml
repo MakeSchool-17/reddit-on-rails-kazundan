@@ -1,0 +1,6 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+js:
+  title: "Facebook React.js"
+  content: "Facebook has plans for developing React.js"
+  votes: 2
