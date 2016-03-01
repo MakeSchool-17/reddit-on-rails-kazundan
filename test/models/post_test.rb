@@ -18,4 +18,13 @@ class PostTest < ActiveSupport::TestCase
       @Post.content = "    "
       assert_not @Post.valid?
   end
+
+  test "post can have comments" do
+    comment = comments(:commentjs)
+    comment.post = @Post
+    comment.save
+    comment.reload
+    assert_equal comment.post, @Post
+    assert @Post.reload.comments.include? comment
+  end
 end
