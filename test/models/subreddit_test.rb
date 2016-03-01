@@ -19,5 +19,13 @@ class SubredditTest < ActiveSupport::TestCase
       assert_not @subreddit.valid?
   end
 
+  test "subreddit can have posts" do
+      post = posts(:js)
+      post.subreddit = @subreddit
+      post.save
+      assert_equal post.subreddit, @subreddit
+      assert @subreddit.reload.posts.include? post
+  end
+
   # FIXME: We need to add more tests (validating uniqueness)
 end
