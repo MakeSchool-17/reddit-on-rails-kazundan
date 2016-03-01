@@ -20,5 +20,14 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.valid?
   end
 
+  test "user can have posts" do
+      post = posts(:js)
+      post.user = @user
+      post.save
+      post.reload
+      assert_equal @user, post.user
+      assert @user.reload.posts.include? post
+  end
+
   # FIXME: We need to add more tests (validating fomat, uniqueness)
 end

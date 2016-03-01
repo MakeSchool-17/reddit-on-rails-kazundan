@@ -1,3 +1,5 @@
+require "minitest/reporters"
+Minitest::Reporters.use!
 require 'simplecov'
 SimpleCov.start 'rails'
 
