@@ -28,10 +28,4 @@ class PostTest < ActiveSupport::TestCase
     assert @post.reload.comments.include? comment
   end
 
-  test "user can make post content to a subreddit" do
-    user = users(:kazu)
-    subreddit = subreddits(:javascript)
-    post.user = user
-
-  end
 end
