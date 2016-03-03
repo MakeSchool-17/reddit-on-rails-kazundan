@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   post 'posts' => 'posts#create'
   put 'posts' => 'posts#update'
+  delete 'posts' => 'posts#destroy'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
