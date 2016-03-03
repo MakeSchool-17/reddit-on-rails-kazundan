@@ -13,6 +13,13 @@ class PostsController < ApplicationController
     # head call.
   end
 
+  def update
+    post = Post.find(params[:id])
+    post.title = post_params["title"]
+    post.content = post_params["content"]
+    post.save
+  end
+
 private
   def post_params
     params.require(:post).permit(:title, :content)
