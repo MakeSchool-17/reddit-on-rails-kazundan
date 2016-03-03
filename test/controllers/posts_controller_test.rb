@@ -27,4 +27,11 @@ class PostsControllerTest < ActionController::TestCase
       assert_equal @post.content, new_content
     #   assert_equal "lorem2"
   end
+
+  test "post can be deleted" do
+    assert_difference 'Post.count', -1 do
+      delete :destroy, id: @post
+    end
+  end
+
 end
