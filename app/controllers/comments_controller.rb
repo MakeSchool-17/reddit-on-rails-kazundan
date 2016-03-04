@@ -8,6 +8,11 @@ class CommentsController < ApplicationController
       comment.save
   end
 
+  def destroy
+      Comment.find(params[:id]).destroy
+      flash[:success] = "Comment deleted"
+  end
+
   def post_params
     params.require(:comment).permit(:content)
   end

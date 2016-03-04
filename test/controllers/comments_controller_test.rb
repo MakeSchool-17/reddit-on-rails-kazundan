@@ -17,4 +17,10 @@ class CommentsControllerTest < ActionController::TestCase
       assert_equal @comment.content, new_content
   end
 
+  test "comments can be deleted" do
+      assert_difference 'Comment.count', -1 do
+        delete :destroy, id: @comment
+      end
+  end
+
 end

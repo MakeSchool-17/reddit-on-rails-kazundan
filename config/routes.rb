@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   delete 'posts' => 'posts#destroy'
 
   put 'comments' => 'comments#update'
+  delete 'comments' => 'comments#destroy'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
