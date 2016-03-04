@@ -23,4 +23,10 @@ class CommentsControllerTest < ActionController::TestCase
       end
   end
 
+  test "comment can be created" do
+      assert_difference 'Comment.count', 1 do
+        post :create, comment: { content: "New comment" }
+      end
+  end
+
 end

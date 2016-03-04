@@ -13,6 +13,12 @@ class CommentsController < ApplicationController
       flash[:success] = "Comment deleted"
   end
 
+  def create
+      comment = Comment.new(post_params)
+      comment.save
+  end
+
+  private
   def post_params
     params.require(:comment).permit(:content)
   end
