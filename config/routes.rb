@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   post 'comments' => 'comments#create'
 
   post 'subreddits' => 'subreddits#create'
+  post 'subreddits' => 'subreddits#update'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

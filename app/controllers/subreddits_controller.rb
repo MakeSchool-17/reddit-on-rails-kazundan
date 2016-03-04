@@ -7,6 +7,12 @@ class SubredditsController < ApplicationController
     subreddit.save
   end
 
+  def update
+      subreddit = Subreddit.find(params[:id])
+      subreddit.title = subreddit_params["title"]
+      subreddit.save
+  end
+
   private
   def subreddit_params
       params.require(:subreddit).permit(:title)
