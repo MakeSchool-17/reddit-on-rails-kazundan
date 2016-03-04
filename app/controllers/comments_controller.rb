@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
 
   def update
       comment = Comment.find(params[:id])
-      comment.content = post_params["content"]
+      comment.content = comment_params["content"]
       comment.save
   end
 
@@ -14,12 +14,12 @@ class CommentsController < ApplicationController
   end
 
   def create
-      comment = Comment.new(post_params)
+      comment = Comment.new(comment_params)
       comment.save
   end
 
   private
-  def post_params
+  def comment_params
     params.require(:comment).permit(:content)
   end
 end
