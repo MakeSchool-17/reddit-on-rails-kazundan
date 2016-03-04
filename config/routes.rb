@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'subreddits/new'
+
   get 'comments/new'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -13,6 +15,8 @@ Rails.application.routes.draw do
   put 'comments' => 'comments#update'
   delete 'comments' => 'comments#destroy'
   post 'comments' => 'comments#create'
+
+  post 'subreddits' => 'subreddits#create'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
