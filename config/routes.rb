@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'comments/new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -7,6 +9,8 @@ Rails.application.routes.draw do
   post 'posts' => 'posts#create'
   put 'posts' => 'posts#update'
   delete 'posts' => 'posts#destroy'
+
+  put 'comments' => 'comments#update'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
