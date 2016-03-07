@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+  get 'subreddits/new'
+  get 'comments/new'
   get 'users/new'
   post 'users' => 'users#create'
   put 'users' => 'users#update'
   delete 'users' => 'users#destroy'
-  get 'comments/new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -17,6 +18,9 @@ Rails.application.routes.draw do
   put 'comments' => 'comments#update'
   delete 'comments' => 'comments#destroy'
   post 'comments' => 'comments#create'
+
+  post 'subreddits' => 'subreddits#create'
+  post 'subreddits' => 'subreddits#update'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
