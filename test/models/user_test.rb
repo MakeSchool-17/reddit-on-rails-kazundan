@@ -29,5 +29,15 @@ class UserTest < ActiveSupport::TestCase
       assert @user.reload.posts.include? post
   end
 
+  test "user can have votes" do
+      vote = votes(:one)
+      vote.user = @user
+      vote.save
+      vote.reload
+      assert_equal @user, vote.user
+      assert @user.reload.votes.include? vote
+  end
+
+
   # FIXME: We need to add more tests (validating fomat, uniqueness)
 end
