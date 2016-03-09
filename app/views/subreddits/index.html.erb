@@ -1,0 +1,9 @@
+index was created
+<ul>
+  <% @subreddits.each do |subr| %>
+  <li>
+    <!-- <%= link_to subr.title, "subreddits/#{subr.id}" %> -->
+    <%= link_to subr.title, subreddit_path(subr.id) %>
+  </li>
+  <% end %>
+</ul>

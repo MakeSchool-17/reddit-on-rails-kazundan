@@ -13,6 +13,15 @@ class SubredditsController < ApplicationController
       subreddit.save
   end
 
+  def index
+    @subreddits = Subreddit.all
+    # render "subreddits/index" (implied)
+  end
+
+  def show
+    @subreddit = Subreddit.find(params[:id])
+  end
+
   private
   def subreddit_params
       params.require(:subreddit).permit(:title)
