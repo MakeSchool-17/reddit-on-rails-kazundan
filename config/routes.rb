@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'subreddits/new'
   get 'comments/new'
   get 'users/new'
