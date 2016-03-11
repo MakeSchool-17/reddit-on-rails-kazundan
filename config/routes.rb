@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :users
+
+  root 'subreddits#index'
+
   get 'subreddits/new'
+  get 'subreddits' => 'subreddits#index'
+  get 'subreddits/:id' => 'subreddits#show', :as => :subreddit
   get 'comments/new'
   get 'users/new'
   post 'users' => 'users#create'
@@ -10,7 +16,6 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
   post 'posts' => 'posts#create'
   put 'posts' => 'posts#update'
   delete 'posts' => 'posts#destroy'
