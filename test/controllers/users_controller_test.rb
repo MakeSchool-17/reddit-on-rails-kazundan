@@ -12,7 +12,7 @@ class UsersControllerTest < ActionController::TestCase
 
   test "Non-registered user can register" do
     assert_difference 'User.count', 1 do
-      post :create, user: { email: "dan@example.com" }
+      post :create, user: { email: "dan@example.com", password: "password" }
     end
   end
 

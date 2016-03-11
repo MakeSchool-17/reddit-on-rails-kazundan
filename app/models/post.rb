@@ -4,4 +4,5 @@ class Post < ActiveRecord::Base
     belongs_to :subreddit
     validates :title, presence: true
     validates :content, presence: true
+    has_many :votes, as: :votable
 end
